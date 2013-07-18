@@ -1,0 +1,22 @@
+common: &common
+  adapter: postgresql
+  encoding: unicode
+  min_messages: warning
+  pool: 5
+  username:
+  password:
+
+development:
+  <<: *common
+  host: localhost
+  database: portfolio_development
+
+test:
+  <<: *common
+  host: localhost
+  database: portfolio_test
+
+production:
+  <<: *common
+  host: localhost
+  database: portfolio-web
