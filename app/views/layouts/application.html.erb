@@ -1,14 +1,48 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= full_title @title %></title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
-
+  <div class="container-fluid">
+    <div class="row-fluid">
+      <div class="span2">
+        <ul class="thumbnails">
+          <li class="span3 tile tile-teal">
+            <a href="#" >
+              <h1>1</h1>
+            </a>
+          </li>
+          <li class="span3 tile tile-orange">
+            <a href="#" >
+              <h1>2</h1>
+            </a>
+          </li>
+          <li class="span3 tile tile-blue">
+            <a href="#" >
+              <h1>3</h1>
+            </a>
+          </li>
+          <li class="span3 tile tile-red">
+            <a href="#" >
+              <h1>4</h1>
+            </a>
+          </li>
+          <li class="span3 tile tile-green">
+            <a href="#" >
+              <h1>5</h1>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="span10">
+        <%= yield %>
+      </div>
+    </div>
+  </div>
 </body>
 </html>

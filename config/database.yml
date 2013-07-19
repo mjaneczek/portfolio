@@ -19,4 +19,4 @@ test:
 production:
   <<: *common
   host: localhost
-  database: portfolio-web
+  database: portfolio_web

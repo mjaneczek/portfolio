@@ -1,0 +1,7 @@
+{
+  "name": "portfolio",
+  "version": "0.0.0",
+  "dependencies": {
+    "metro-bootstrap": "https://github.com/mjaneczek/metro-bootstrap.git"
+  }
+}
