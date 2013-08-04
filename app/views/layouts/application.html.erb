@@ -8,33 +8,27 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <div class="container-fluid">
-    <div class="row-fluid">
-      <div class="span2">
-        <ul class="thumbnails">
-          <li class="span3 tile tile-teal">
-            <%= link_to root_path do %>
-              <h1>home</h1>
-            <% end %>
-          </li>
-          <li class="span3 tile tile-orange">
-            <%= link_to windows_applications_path do %>
-              <h1>win</h1>
-            <% end %>
-          </li>
-          <li class="span3 tile tile-blue">
-            <%= link_to web_applications_path do %>
-              <h1>web</h1>
-            <% end %>
-          </li>
-          <li class="span3 tile tile-red">
-            <%= link_to about_path do %>
-              <h1>about</h1>
-            <% end %>
-          </li>
+  <div class="navbar">
+    <div class="container">
+      <a class="navbar-brand" href="#">Michał Janeczek</a>
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#">Projekty</a></li>
+        <li><a href="#">Technologie</a></li>
+        <li><a href="#">O mnie</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-2">
+        <ul class="nav nav-pills nav-stacked">
+          <li class="active"><a href="#">Home</a></li>
+          <li><a href="#">Profile</a></li>
+          <li><a href="#">Messages</a></li>
         </ul>
       </div>
-      <div class="span10">
+      <div class="col-lg-10" id="content">
         <%= yield %>
       </div>
     </div>

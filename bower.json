@@ -2,6 +2,6 @@
   "name": "portfolio",
   "version": "0.0.0",
   "dependencies": {
-    "metro-bootstrap": "https://github.com/TalksLab/metro-bootstrap.git"
+    "bootstrap": "https://github.com/twbs/bootstrap.git"
   }
 }
