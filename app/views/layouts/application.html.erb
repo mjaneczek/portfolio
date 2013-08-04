@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title><%= full_title @title %></title>
+  <title><%= full_title yield(:title) %></title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
@@ -29,6 +29,11 @@
         </ul>
       </div>
       <div class="col-lg-10" id="content">
+        <% if content_for? :title %>
+          <div class="page-header">
+            <h1><%= yield :title %></h1>
+          </div>
+        <% end %>
         <%= yield %>
       </div>
     </div>
