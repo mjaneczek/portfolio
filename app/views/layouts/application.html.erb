@@ -21,11 +21,11 @@
   </div>
   <div class="container">
     <div class="row">
-      <div class="col-lg-2">
+      <div class="col-lg-2" id="left_menu">
         <ul class="nav nav-pills nav-stacked">
-          <li class="active"><a href="#">Home</a></li>
-          <li><a href="#">Profile</a></li>
-          <li><a href="#">Messages</a></li>
+          <% left_menu.get_items.each do |item| %>
+          <li class="menu-item"><%= link_to item[:name], item[:path] %></li>
+          <% end %>
         </ul>
       </div>
       <div class="col-lg-10" id="content">

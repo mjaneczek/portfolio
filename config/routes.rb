@@ -1,4 +1,6 @@
 Portfolio::Application.routes.draw do
+  resources :projects
+
   root 'home#index'
 
   get 'windows' => 'home#windows_applications', as: 'windows_applications'

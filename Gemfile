@@ -24,3 +24,7 @@ end
 group :production do
   gem 'rails_12factor'
 end
+
+group :development, :test do
+  gem 'rspec-rails', '~> 2.0'
+end

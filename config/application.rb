@@ -18,5 +18,7 @@ module Portfolio
     
     config.i18n.default_locale = :pl
     config.i18n.fallbacks = [:en]
+
+    config.autoload_paths += Dir["#{config.root}/lib/**/"]
   end
 end
