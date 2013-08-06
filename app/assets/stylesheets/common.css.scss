@@ -6,3 +6,7 @@
 .menu-item a {
   background-color: rgb(220, 220, 220)
 }
+
+.nav-pills > li + li {
+    margin-left: 0px !important;
+}

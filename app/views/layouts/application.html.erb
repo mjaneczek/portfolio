@@ -10,10 +10,10 @@
 <body>
   <div class="navbar">
     <div class="container">
-      <a class="navbar-brand" href="#">Michał Janeczek</a>
+      <%= link_to "Michał Janeczek", root_path, class: "navbar-brand" %>
       <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Home</a></li>
-        <li><a href="#">Projekty</a></li>
+        <li><%= link_to "Home", root_path %></li>
+        <li><%= link_to "Projekty", projects_path %></li>
         <li><a href="#">Technologie</a></li>
         <li><a href="#">O mnie</a></li>
       </ul>

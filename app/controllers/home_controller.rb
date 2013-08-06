@@ -1,14 +1,9 @@
 class HomeController < ApplicationController
 	def index
-    left_menu.register_item("test", "test")
+    Project.take(5).each do |project|
+      left_menu.register_item(project.name, project_path(project))
+    end
+
+    @last_project = Project.last
 	end
-
-  def windows_applications
-  end
-
-  def web_applications
-  end
-
-  def about
-  end
 end

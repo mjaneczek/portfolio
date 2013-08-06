@@ -8,7 +8,9 @@
   W przypadku potrzeby kontaktu zapraszam na podstronę "O mnie".
 </p>
 
-<div class="panel panel-primary">
-  <div class="panel-heading">Ostatnio dodany projekt</div>
-  <a href="#">2013-08-04 | Michał Janeczek - Portfolio</a>
-</div>
+<% if @last_project %>
+  <div class="panel panel-primary">
+    <div class="panel-heading">Ostatnio dodany projekt</div>
+      <%= link_to "#{@last_project.created_at.strftime("%d-%m-%Y") } | #{@last_project.name}", project_path(@last_project) %>
+  </div>
+<% end %>
