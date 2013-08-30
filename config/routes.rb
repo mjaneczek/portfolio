@@ -1,4 +1,6 @@
 Portfolio::Application.routes.draw do
+  resources :technologies
+
   resources :projects
 
   root 'home#index'
