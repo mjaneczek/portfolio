@@ -8,7 +8,7 @@ describe "layouts/application" do
       rendered.should have_link 'Home', href: root_path
       rendered.should have_link 'Projekty', href: projects_path
       rendered.should have_link 'Technologie', href: technologies_path
-      rendered.should have_link 'O mnie', href: "#"
+      rendered.should have_link 'O mnie', href: about_path
     end
   end
 

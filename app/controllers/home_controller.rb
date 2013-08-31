@@ -6,4 +6,7 @@ class HomeController < ApplicationController
 
     @last_project = Project.last
 	end
+
+  def about
+  end
 end
