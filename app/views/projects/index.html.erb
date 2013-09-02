@@ -1,20 +1,7 @@
 <% content_for :title, "Lista projektów" %>
 
-<div class="list-group">
-  <% @projects.each do |project| %>
-    <div class="list-group-item">
-      <h4 class="list-group-item-heading"><%= project.name %></h4>
-      <div class="list-group-item-text">
-        <%= project.description %>
-      </div>
-      <div>
-        <%= link_to 'Show', project %>
-        <%= link_to 'Edit', edit_project_path(project) %>
-        <%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %>
-      </div>
-    </div>
-  <% end %>
-</div>
+<%= render partial: "components/list_group", :locals => {
+  element_name: "projects", head: "name", content: "description"
+} %>
 
-
-<%= link_to 'New Project', new_project_path %>
+<%= link_to 'Nowy projekt', new_project_path %>

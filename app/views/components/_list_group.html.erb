@@ -1,0 +1,15 @@
+<div class="list-group">
+  <% instance_variable_get("@#{element_name}").each do |element| %>
+    <a class="list-group-item">
+      <h4 class="list-group-item-heading"><%= element.send(head) %></h4>
+      <div class="list-group-item-text">
+        <%= element.send(content) if defined? content %>
+      </div>
+    </a>
+     <div class="well well-sm">
+      <%= link_to 'Show', element %>
+      <%= link_to 'Edit', send("edit_#{element.class.name.underscore}_path", element) %>
+      <%= link_to 'Destroy', element, method: :delete, data: { confirm: 'Are you sure?' } %>
+    </div>
+  <% end %>
+</div>
