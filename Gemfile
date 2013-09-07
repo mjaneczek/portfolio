@@ -12,6 +12,7 @@ gem 'turbolinks'
 
 gem 'jbuilder', '~> 1.2'
 gem 'devise'
+gem 'cancan'
 
 group :doc do
   gem 'sdoc', require: false

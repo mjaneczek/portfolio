@@ -1,10 +1,8 @@
 class TechnologiesController < ApplicationController
-  before_action :set_technology, only: [:show, :edit, :update, :destroy]
-
+  load_and_authorize_resource
   # GET /technologies
   # GET /technologies.json
   def index
-    @technologies = Technology.all
   end
 
   # GET /technologies/1
@@ -14,7 +12,6 @@ class TechnologiesController < ApplicationController
 
   # GET /technologies/new
   def new
-    @technology = Technology.new
   end
 
   # GET /technologies/1/edit
@@ -24,8 +21,6 @@ class TechnologiesController < ApplicationController
   # POST /technologies
   # POST /technologies.json
   def create
-    @technology = Technology.new(technology_params)
-
     respond_to do |format|
       if @technology.save
         format.html { redirect_to @technology, notice: 'Technology was successfully created.' }
@@ -62,11 +57,6 @@ class TechnologiesController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_technology
-      @technology = Technology.find(params[:id])
-    end
-
     # Never trust parameters from the scary internet, only allow the white list through.
     def technology_params
       params.require(:technology).permit(:name)

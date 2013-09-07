@@ -7,9 +7,9 @@
       </div>
     </a>
      <div class="well well-sm">
-      <%= link_to 'Show', element %>
-      <%= link_to 'Edit', send("edit_#{element.class.name.underscore}_path", element) %>
-      <%= link_to 'Destroy', element, method: :delete, data: { confirm: 'Are you sure?' } %>
+      <%= link_to 'Szczegóły', element %>
+      <%= link_to 'Edytuj', send("edit_#{element.class.name.underscore}_path", element) %>
+      <%= link_to 'Usuń', element, method: :delete, data: { confirm: 'Are you sure?' } %>
     </div>
   <% end %>
 </div>

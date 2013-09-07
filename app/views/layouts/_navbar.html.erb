@@ -19,6 +19,11 @@
         <li><%= link_to "Technologie", technologies_path %></li>
         <li><%= link_to "O mnie", about_path %></li>
       </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <% if user_signed_in? %>
+          <li><%= link_to "Wyloguj", destroy_user_session_path, method: :delete %></li>
+        <% end %>
+      </ul>
     </div>
   </div>
 </nav>
