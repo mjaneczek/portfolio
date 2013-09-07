@@ -1,11 +1,12 @@
 Portfolio::Application.routes.draw do
-  resources :technologies
+  resources :projects_technologies
 
+  devise_for :users
+  resources :technologies
   resources :projects
 
   root 'home#index'
   get 'about' => 'home#about', as: 'about'
 
-  get ':controller' => 'controller#index'
-  get ':controller/:action/' => 'controller#action'
+  get 'details/:type/:id' => 'details#index', as: 'details'
 end
