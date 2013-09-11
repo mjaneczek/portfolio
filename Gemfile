@@ -27,9 +27,12 @@ group :production do
   gem 'rails_12factor'
 end
 
-group :development, :test do
+group :test do
   gem 'rspec-rails', '~> 2.0'
+  gem 'shoulda-matchers',   '~> 2.3.0'
   gem 'factory_girl_rails', require: false
   gem 'capybara'
   gem 'database_cleaner'
+  gem 'coderay', '~> 1.0.9'
+  gem 'guard-rspec'
 end
