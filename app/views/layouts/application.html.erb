@@ -10,23 +10,12 @@
 <body>
   <%= render 'layouts/navbar' %>
   <div class="container">
-    <div class="row">
-      <div class="col-lg-2" id="left_menu">
-        <ul class="nav nav-pills nav-stacked">
-          <% left_menu.get_items.each do |item| %>
-          <li class="menu-item"><%= link_to item[:name], item[:path] %></li>
-          <% end %>
-        </ul>
+    <% if content_for? :title %>
+      <div class="page-header">
+        <h1><%= yield :title %></h1>
       </div>
-      <div class="col-lg-10" id="content">
-        <% if content_for? :title %>
-          <div class="page-header">
-            <h1><%= yield :title %></h1>
-          </div>
-        <% end %>
-        <%= yield %>
-      </div>
-    </div>
+    <% end %>
+    <%= yield %>
     <div class="footer">
       <p>Michał Janeczek © 2013</p>
     </div>
