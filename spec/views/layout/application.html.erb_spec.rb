@@ -14,31 +14,8 @@ describe "layouts/application" do
       should have_link 'O mnie',      href: about_path
     end
 
-    it "has logout link if user is logged" do
-      render
-      should have_link "Wyloguj", href: destroy_user_session_path
-    end
-
-    it "has not logout link if user is not logged" do
-      view.stub(:user_signed_in?) { false }
-      render
-      should_not have_link "Wyloguj", href: destroy_user_session_path
-    end
-  end
-
-  describe "left menu" do
-    it "renders page without menu" do
-      render
-      should have_selector('#left_menu ul li', count: 0)
-    end
-
-    it "renders page with menu" do
-      left_menu.register_item("test", "link")
-      left_menu.register_item("test2", "link2")
-      render
-
-      should have_selector('#left_menu ul li a[href="link"]')
-      should have_selector('#left_menu ul li a[href="link2"]')
+    it "has admins links if user is logged" do
+      check_condition(:user_signed_in?) {|c| c[have_link "Wyloguj", href: destroy_user_session_path] }
     end
   end
 

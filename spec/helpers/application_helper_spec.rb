@@ -12,8 +12,12 @@ describe ApplicationHelper do
   end
 
   describe "create button" do
-    it "should have link to create action" do
-      expect(helper.create_button_for(Project)).to have_link "Dodaj nowy element", href: new_project_path
+    def partial_render
+      helper.create_button_for(Project)
+    end
+
+    it "should have link to create action if admin" do
+      check_condition(:user_signed_in?) {|c| c[have_link "Dodaj nowy element", href: new_project_path] }
     end
   end
 end

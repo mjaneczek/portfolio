@@ -5,6 +5,8 @@ module ApplicationHelper
   end
 
   def create_button_for(type)
-    render partial: "components/create_button_for", locals: { path: send("new_#{type.name.underscore}_path") }
+    if user_signed_in?
+      render partial: "components/create_button_for", locals: { path: send("new_#{type.name.underscore}_path") }
+    end
   end
 end
