@@ -5,7 +5,8 @@ describe "components/list_group" do
 
   def partial_render
     render partial: "components/list_group", locals: {
-      element_name: "projects", head: "name", content: "description" }
+      element_name: :@projects, head: :name, content: :description,
+      tags: :technologies, tag_name: :name }
   end
 
   before(:each) do
@@ -30,5 +31,9 @@ describe "components/list_group" do
         condition[have_link "Usuń",   href: project_path(project)]
       end
     end
+  end
+
+  it "has tags" do
+    should have_text "Technology", count: 3
   end
 end

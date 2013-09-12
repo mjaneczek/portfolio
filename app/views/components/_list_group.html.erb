@@ -1,12 +1,18 @@
 <div class="list-group" id="accordion">
-  <% instance_variable_get("@#{element_name}").each do |element| %>
+  <% instance_variable_get(element_name).each do |element| %>
     <div class="list-group-item">
       <div class="panel-heading">
-        <h4 class="panel-title">
+        <h3 class="panel-title">
           <a class="accordion-toggle" data-toggle="collapse" href="#item<%= element.id %>">
             <%= element.send(head) %>
           </a>
-        </h4>
+        </h3>
+
+        <% if defined? tags %>
+          <% element.send(tags).each do |tag| %>
+            <h4 class="panel-title tag"><span class="label label-default"><%= tag.send(tag_name) %></span></h4>
+          <% end %>
+        <% end %>
       </div>
       <div id="item<%= element.id %>" class="panel-collapse collapse">
         <div class="panel-body">

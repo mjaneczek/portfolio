@@ -1,7 +1,7 @@
 <% content_for :title, "Lista technologii" %>
 
-<%= render partial: "components/list_group", :locals => {
-  element_name: "technologies", head: "name"
+<%= render partial: "components/list_group", locals: {
+  element_name: :@technologies, head: :name
 } %>
 
 <%= create_button_for(Technology) %>
