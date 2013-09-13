@@ -10,7 +10,7 @@
 
         <% if defined? tags %>
           <% element.send(tags).each do |tag| %>
-            <h4 class="panel-title tag"><span class="label label-default"><%= tag.send(tag_name) %></span></h4>
+            <h4 class="panel-title tag"><span class="label <%= tag.try(:css_class) %>"><%= tag.send(tag_name) %></span></h4>
           <% end %>
         <% end %>
       </div>

@@ -8,5 +8,6 @@ FactoryGirl.define do
 
   factory :technology do |t|
     t.name { |n| "Technology #{n}"}
+    t.css_class "label-primary"
   end
 end

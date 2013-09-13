@@ -14,6 +14,7 @@ describe "components/list_group" do
 
     Project.any_instance.stub(:name).and_return("header here")
     Project.any_instance.stub(:description).and_return("description here")
+    view.stub(:user_signed_in?).and_return(false)
 
     partial_render
   end
@@ -34,6 +35,6 @@ describe "components/list_group" do
   end
 
   it "has tags" do
-    should have_text "Technology", count: 3
+    should have_selector(".tag .label.#{@projects.first.technologies.first.css_class}", text: "Technology", count: 3)
   end
 end

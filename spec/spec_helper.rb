@@ -57,5 +57,4 @@ RSpec.configure do |config|
   end
 
   config.include Helpers
-  config.include Devise::TestHelpers
 end

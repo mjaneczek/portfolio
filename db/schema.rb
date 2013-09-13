@@ -32,6 +32,7 @@ ActiveRecord::Schema.define(version: 20130907140624) do
 
   create_table "technologies", force: true do |t|
     t.string   "name",       null: false
+    t.string   "css_class"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
