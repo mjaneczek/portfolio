@@ -1,9 +1,14 @@
-<p id="notice"><%= notice %></p>
+<% content_for :title, @technology.name %>
 
-<p>
-  <strong>Name:</strong>
-  <%= @technology.name %>
-</p>
-
-<%= link_to 'Edit', edit_technology_path(@technology) %> |
-<%= link_to 'Back', technologies_path %>
+<div class="row">
+  <div class="col-md-8">
+    <%= @technology.full_description %>
+  </div>
+  <div class="col-md-4">
+    <div class="list-group">
+      <% @technology.projects.each do |project| %>
+        <%= link_to project.name, project_path(project), class: "list-group-item" %>
+      <% end %>
+    </div>
+  </div>
+</div>

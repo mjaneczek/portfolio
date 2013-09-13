@@ -9,4 +9,8 @@ module ApplicationHelper
       render partial: "components/create_button_for", locals: { path: send("new_#{type.name.underscore}_path") }
     end
   end
+
+  def tag_for(text, css_class, path)
+    render partial: "components/label", locals: { text: text, css_class: css_class, path: path }
+  end
 end

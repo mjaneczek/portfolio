@@ -15,6 +15,7 @@ describe "components/list_group" do
     Project.any_instance.stub(:name).and_return("header here")
     Project.any_instance.stub(:description).and_return("description here")
     view.stub(:user_signed_in?).and_return(false)
+    view.stub(:technology_path).and_return("fake path")
 
     partial_render
   end
@@ -35,6 +36,7 @@ describe "components/list_group" do
   end
 
   it "has tags" do
-    should have_selector(".tag .label.#{@projects.first.technologies.first.css_class}", text: "Technology", count: 3)
+    css_class = @projects.first.technologies.first.css_class
+    should have_selector(".tag .label.#{css_class} a[href='fake path']", text: "Technology", count: 3)
   end
 end

@@ -20,4 +20,11 @@ describe ApplicationHelper do
       check_condition(:user_signed_in?) {|c| c[have_link "Dodaj nowy element", href: new_project_path] }
     end
   end
+
+  describe "label" do
+    it "should have correct class and text" do
+      expect(helper.tag_for("text", "some_style", "link")).to(
+        have_selector('.some_style a[href="link"]', text: "text"))
+    end
+  end
 end

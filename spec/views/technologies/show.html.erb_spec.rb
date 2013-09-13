@@ -2,14 +2,14 @@ require 'spec_helper'
 
 describe "technologies/show" do
   before(:each) do
-    @technology = assign(:technology, stub_model(Technology,
-      :name => "Name"
-    ))
+    @technology = FactoryGirl.create(:technology, name: "name", full_description: "full_description",
+      projects: FactoryGirl.create_list(:project, 2, name: "test_project"))
   end
 
-  it "renders attributes in <p>" do
+  it "renders attributes" do
     render
-    # Run the generator again with the --webrat flag if you want to use webrat matchers
-    rendered.should match(/Name/)
+    expect(view.content_for(:title)).to match(/name/)
+    expect(rendered).to have_text("full_description")
+    expect(rendered).to have_link Project.first.name, project_path(Project.first)
   end
 end

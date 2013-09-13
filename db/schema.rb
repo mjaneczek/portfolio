@@ -14,8 +14,9 @@
 ActiveRecord::Schema.define(version: 20130907140624) do
 
   create_table "projects", force: true do |t|
-    t.string   "name",        null: false
+    t.string   "name",             null: false
     t.text     "description"
+    t.text     "full_description"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -31,8 +32,10 @@ ActiveRecord::Schema.define(version: 20130907140624) do
   add_index "projects_technologies", ["technology_id"], name: "index_projects_technologies_on_technology_id", using: :btree
 
   create_table "technologies", force: true do |t|
-    t.string   "name",       null: false
+    t.string   "name",             null: false
+    t.text     "description"
     t.string   "css_class"
+    t.text     "full_description"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
