@@ -1,11 +1,10 @@
 <h1>Listing projects_technologies</h1>
 
-<table>
+<table class="table">
   <thead>
     <tr>
       <th>Project</th>
       <th>Technology</th>
-      <th></th>
       <th></th>
       <th></th>
     </tr>
@@ -14,9 +13,8 @@
   <tbody>
     <% @projects_technologies.each do |projects_technology| %>
       <tr>
-        <td><%= projects_technology.project %></td>
-        <td><%= projects_technology.technology %></td>
-        <td><%= link_to 'Show', projects_technology %></td>
+        <td><%= projects_technology.project.name %></td>
+        <td><%= projects_technology.technology.name %></td>
         <td><%= link_to 'Edit', edit_projects_technology_path(projects_technology) %></td>
         <td><%= link_to 'Destroy', projects_technology, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>

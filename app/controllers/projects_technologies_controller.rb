@@ -1,5 +1,5 @@
 class ProjectsTechnologiesController < ApplicationController
-  load_and_authorize_resource
+  load_and_authorize_resource :except => [:create]
 
   # GET /projects_technologies
   # GET /projects_technologies.json
@@ -22,6 +22,9 @@ class ProjectsTechnologiesController < ApplicationController
   # POST /projects_technologies
   # POST /projects_technologies.json
   def create
+    authorize! :create, ProjectsTechnology
+    @projects_technology = ProjectsTechnology.new(projects_technology_params)
+
     respond_to do |format|
       if @projects_technology.save
         format.html { redirect_to @projects_technology, notice: 'Projects technology was successfully created.' }

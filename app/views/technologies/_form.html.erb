@@ -1,21 +1,7 @@
-<%= form_for(@technology) do |f| %>
-  <% if @technology.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@technology.errors.count, "error") %> prohibited this technology from being saved:</h2>
-
-      <ul>
-      <% @technology.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+<%= simple_form_for @technology do |f| %>
+  <%= f.input :name %>
+  <%= f.input :css_class %>
+  <%= f.input :description %>
+  <%= f.input :full_description %>
+  <%= f.button :submit %>
 <% end %>

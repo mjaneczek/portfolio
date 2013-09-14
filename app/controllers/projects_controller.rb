@@ -1,5 +1,5 @@
 class ProjectsController < ApplicationController
-  load_and_authorize_resource
+  load_and_authorize_resource :except => [:create]
 
   # GET /projects
   # GET /projects.json
@@ -22,6 +22,9 @@ class ProjectsController < ApplicationController
   # POST /projects
   # POST /projects.json
   def create
+    authorize! :create, Project
+    @project = Project.new(project_params)
+
     respond_to do |format|
       if @project.save
         format.html { redirect_to @project, notice: 'Project was successfully created.' }
@@ -60,6 +63,6 @@ class ProjectsController < ApplicationController
   private
     # Never trust parameters from the scary internet, only allow the white list through.
     def project_params
-      params.require(:project).permit(:name, :description)
+      params.require(:project).permit(:name, :description, :full_description)
     end
 end

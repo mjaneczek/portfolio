@@ -1,5 +1,6 @@
 class TechnologiesController < ApplicationController
-  load_and_authorize_resource
+  load_and_authorize_resource :except => [:create]
+
   # GET /technologies
   # GET /technologies.json
   def index
@@ -21,6 +22,9 @@ class TechnologiesController < ApplicationController
   # POST /technologies
   # POST /technologies.json
   def create
+    authorize! :create, Technology
+    @technology = Technology.new(technology_params)
+
     respond_to do |format|
       if @technology.save
         format.html { redirect_to @technology, notice: 'Technology was successfully created.' }
@@ -59,6 +63,6 @@ class TechnologiesController < ApplicationController
   private
     # Never trust parameters from the scary internet, only allow the white list through.
     def technology_params
-      params.require(:technology).permit(:name)
+      params.require(:technology).permit(:name, :description, :full_description, :css_class)
     end
 end
