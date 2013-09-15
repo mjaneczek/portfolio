@@ -7,6 +7,7 @@ class Ability
     else
         can :read, :all
         cannot :read, ProjectsTechnology
+        cannot :index, Screenshot
     end
   end
 end

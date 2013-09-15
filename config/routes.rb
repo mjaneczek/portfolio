@@ -1,4 +1,6 @@
 Portfolio::Application.routes.draw do
+  resources :screenshots
+
   resources :projects_technologies
 
   devise_for :users
