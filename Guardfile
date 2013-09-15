@@ -23,9 +23,9 @@ guard :rspec, zeus: true do
 end
 
 
-guard :jasmine, server: :webrick, server_mount: '/specs' do
+guard :jasmine, server: :webrick, server_mount: '/jasmine', console: :always do
   watch(%r{spec/javascripts/spec\.(js\.coffee|js|coffee)$}) { 'spec/javascripts' }
   watch(%r{spec/javascripts/.+_spec\.(js\.coffee|js|coffee)$})
   watch(%r{spec/javascripts/fixtures/.+$})
-  watch(%r{app/assets/javascripts/(.+?)\.(js\.coffee|js|coffee)(?:\.\w+)*$}) { |m| "spec/javascripts/#{ m[1] }_spec.#{ m[2] }" }
+  watch(%r{app/assets/javascripts/(.+?)\.(js\.coffee|js|coffee)(?:\.\w+)*$}) { |m| "spec/javascripts/#{ m[1] }_spec.coffee" }
 end

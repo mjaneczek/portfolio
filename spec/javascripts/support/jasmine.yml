@@ -6,9 +6,9 @@
 # EXAMPLE:
 #
 # src_files:
-#   - lib/source1.js
-#   - lib/source2.js
-#   - dist/**/*.js
+# - lib/source1.js
+# - lib/source2.js
+# - dist/**/*.js
 #
 src_files:
   - assets/application.js
@@ -21,8 +21,8 @@ src_files:
 # EXAMPLE:
 #
 # stylesheets:
-#   - css/style.css
-#   - stylesheets/*.css
+# - css/style.css
+# - stylesheets/*.css
 #
 stylesheets:
   - stylesheets/**/*.css
@@ -35,7 +35,7 @@ stylesheets:
 # EXAMPLE:
 #
 # helpers:
-#   - helpers/**/*.js
+# - helpers/**/*.js
 #
 helpers:
   - helpers/**/*.js
@@ -48,10 +48,10 @@ helpers:
 # EXAMPLE:
 #
 # spec_files:
-#   - **/*[sS]pec.js
+# - **/*[sS]pec.js
 #
 spec_files:
-  - '**/*[sS]pec.js'
+  - '**/*[sS]pec.{js,coffee}'
 
 # src_dir
 #

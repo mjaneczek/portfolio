@@ -38,4 +38,5 @@ group :development, :test do
   gem 'guard-rspec'
   gem "jasmine-rails"
   gem 'guard-jasmine'
+  gem 'jasmine-jquery-rails'
 end
