@@ -9,4 +9,6 @@ Portfolio::Application.routes.draw do
   get 'about' => 'home#about', as: 'about'
 
   get 'details/:type/:id' => 'details#index', as: 'details'
+
+  mount JasmineRails::Engine => '/specs' if defined?(JasmineRails)
 end
