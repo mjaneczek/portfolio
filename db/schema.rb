@@ -32,7 +32,7 @@ ActiveRecord::Schema.define(version: 20130915222404) do
   add_index "projects_technologies", ["technology_id"], name: "index_projects_technologies_on_technology_id", using: :btree
 
   create_table "screenshots", force: true do |t|
-    t.string   "image"
+    t.string   "image",       null: false
     t.text     "description"
     t.integer  "project_id"
     t.datetime "created_at"

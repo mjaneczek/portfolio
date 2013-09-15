@@ -16,6 +16,7 @@ describe Project do
     it { should respond_to(:description) }
     it { should respond_to(:full_description) }
 
+    it { should have_many(:screenshots) }
     it { should have_and_belong_to_many(:technologies) }
   end
 end

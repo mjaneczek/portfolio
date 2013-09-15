@@ -13,4 +13,11 @@ FactoryGirl.define do
     f.description { |n| "Description #{n}" } 
     f.full_description { |n| "Full description #{n}" } 
   end
+
+  factory :screenshot do |f|
+    f.image "image.png"
+    f.description { |n| "Description #{n}" } 
+    
+    project
+  end
 end

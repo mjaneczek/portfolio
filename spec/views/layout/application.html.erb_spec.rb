@@ -15,7 +15,11 @@ describe "layouts/application" do
     end
 
     it "has admins links if user is logged" do
-      check_condition(:user_signed_in?) {|c| c[have_link "Wyloguj", href: destroy_user_session_path] }
+      check_condition(:user_signed_in?) do |condition| 
+        condition[have_link "Zdjęcia", href: screenshots_path]
+        condition[have_link "Projekt - Technologia", href: projects_technologies_path]
+        condition[have_link "Wyloguj", href: destroy_user_session_path]
+      end
     end
   end
 
