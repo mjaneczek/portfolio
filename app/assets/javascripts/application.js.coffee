@@ -1,7 +1,7 @@
 #= require jquery
 #= require jquery-migrate-min
 #= require jquery_ujs
-#= require jquery.ui.core
+#= require jquery.ui.all
 #= require fancybox
 #= require turbolinks
 #= require bootstrap/dist/js/bootstrap.min.js

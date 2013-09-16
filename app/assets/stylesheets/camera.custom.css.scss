@@ -1,0 +1,32 @@
+.camera_target_content .camera_link {
+  background: image-url("blank.gif") !important;
+}
+
+.camera_prevThumbs div {
+  background: image-url("camera/images/camera_skins.png") no-repeat -160px 0 !important;
+}
+
+.camera_nextThumbs div {
+  background: image-url("camera/images/camera_skins.png") no-repeat -190px 0 !important;
+}
+
+.camera_prev > span {
+  background: image-url("camera/images/camera_skins.png") no-repeat 0 0 !important;
+}
+
+.camera_next > span {
+  background: image-url("camera/images/camera_skins.png") no-repeat -40px 0 !important;
+}
+
+.camera_commands > .camera_play {
+  background: image-url("camera/images/camera_skins.png") no-repeat -80px 0 !important;
+}
+
+.camera_commands > .camera_stop {
+  background: image-url("camera/images/camera_skins.png") no-repeat -120px 0 !important;
+}
+
+.camera_loader {
+  background: #fff image-url("camera/images/camera-loader.gif") no-repeat center !important;
+  background: rgba(255, 255, 255, 0.9) image-url("camera/images/camera-loader.gif") no-repeat center !important;
+}
