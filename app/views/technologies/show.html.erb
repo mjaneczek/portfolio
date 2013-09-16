@@ -6,7 +6,7 @@
   </div>
   <div class="col-md-4">
     <div class="list-group">
-      <a class="list-group-item active">Powiązane projekty:</li>
+      <a class="list-group-item active">Powiązane projekty:</li></a>
       <% @technology.projects.each do |project| %>
         <%= link_to project.name, project_path(project), class: "list-group-item" %>
       <% end %>
