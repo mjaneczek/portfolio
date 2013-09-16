@@ -16,6 +16,7 @@ gem 'cancan'
 gem 'simple_form', git: 'git://github.com/plataformatec/simple_form.git'
 gem 'jquery-migrate-rails'
 gem 'jquery-ui-rails'
+gem 'fancybox-rails'
 
 group :doc do
   gem 'sdoc', require: false

@@ -3,6 +3,7 @@
 <div class="row">
   <div class="col-lg-2" id="left_menu">
     <ul class="nav nav-pills nav-stacked">
+      <li class="active"><a>Ostatnie projekty:</a></li>
       <% left_menu.get_items.each do |item| %>
       <li class="menu-item"><%= link_to item[:name], item[:path] %></li>
       <% end %>

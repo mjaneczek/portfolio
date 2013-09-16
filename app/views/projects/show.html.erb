@@ -6,6 +6,19 @@
   <% end %>
 </div>
 
-<div>
+<div class="spacer">
   <%= @project.full_description %>
 </div>
+
+<% if @project.screenshots.count > 0 %>
+  <div class="panel panel-primary">
+    <div class="panel-heading">Screenshots</div>
+    <div class="panel-body">
+      <% @project.screenshots.each do |screnshot| %>
+        <a class="fancybox" href="<%= image_path(screnshot.image) %>">
+          <%= image_tag(screnshot.image, alt: screnshot.description, size: "270x200") %>
+        </a>
+      <% end %>
+    </div>
+  </div>
+<% end %>

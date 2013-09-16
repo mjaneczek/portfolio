@@ -3,7 +3,7 @@ Portfolio::Application.routes.draw do
 
   resources :projects_technologies
 
-  devise_for :users
+  devise_for :users, controllers: { :registrations => "registrations" } 
   resources :technologies
   resources :projects
 

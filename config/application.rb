@@ -20,5 +20,6 @@ module Portfolio
     config.i18n.fallbacks = [:en]
 
     config.autoload_paths += Dir["#{config.root}/lib/**/"]
+    config.assets.initialize_on_precompile = false
   end
 end
