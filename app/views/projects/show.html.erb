@@ -7,7 +7,7 @@
 </div>
 
 <div class="spacer">
-  <%= @project.full_description %>
+  <%= @project.full_description.html_safe %>
 </div>
 
 <% if @project.screenshots.count > 0 %>
