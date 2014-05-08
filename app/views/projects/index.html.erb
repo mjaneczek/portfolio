@@ -1,9 +1,0 @@
-<% content_for :title, "Lista projektów" %>
-
-<div class="well" id="tag_filter"> </div>
-
-<%= render partial: "components/list_group", locals: {
-      element_name: :@projects, head: :name, content: :description,
-      tags: :technologies, tag_name: :name } %>
-
-<%= create_button_for(Project) %>
