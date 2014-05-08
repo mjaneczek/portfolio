@@ -8,13 +8,13 @@ gem 'jquery-ui-rails'
 gem 'pg'
 gem 'railties', '~> 4.1.0'
 gem 'sass-rails'
-gem 'simple_form', git: 'git://github.com/plataformatec/simple_form.git'
 gem 'slim-rails'
-gem 'uglifier'
 
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller'
+  gem 'spring'
+  gem 'quiet_assets'
 end
 
 group :production do
