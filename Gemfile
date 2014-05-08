@@ -33,5 +33,5 @@ group :development, :test do
   gem 'jasmine-jquery-rails'
   gem 'jasmine-rails'
   gem 'rspec-rails', '~> 2.0'
-  gem 'shoulda-matchers', '~> 2.3.0'
+  gem 'shoulda-matchers', '~> 2.3.0', require: false
 end
