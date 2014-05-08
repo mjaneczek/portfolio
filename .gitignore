@@ -5,3 +5,6 @@
 /tmp
 /vendor/assets/components
 /public/assets
+.ruby-version
+/config/database.yml
+.idea/

@@ -1,26 +1,18 @@
 source 'https://rubygems.org'
+gem 'rails', '4.1.0'
 
-gem 'rails', '4.0.0'
-gem 'pg'
-
-gem 'sass-rails', '~> 4.0.0'
-gem 'uglifier', '>= 1.3.0'
-gem 'coffee-rails', '~> 4.0.0'
-
-gem 'jquery-rails'
-gem 'turbolinks'
-
-gem 'jbuilder', '~> 1.2'
-gem 'devise'
 gem 'cancan'
-gem 'simple_form', git: 'git://github.com/plataformatec/simple_form.git'
-gem 'jquery-migrate-rails'
-gem 'jquery-ui-rails'
+gem 'coffee-rails'
+gem 'devise'
 gem 'fancybox-rails'
-
-group :doc do
-  gem 'sdoc', require: false
-end
+gem 'jquery-migrate-rails'
+gem 'jquery-rails'
+gem 'jquery-ui-rails'
+gem 'pg'
+gem 'railties', '~> 4.1.0'
+gem 'sass-rails'
+gem 'simple_form', git: 'git://github.com/plataformatec/simple_form.git'
+gem 'uglifier'
 
 group :development do
   gem 'better_errors'
@@ -32,14 +24,14 @@ group :production do
 end
 
 group :development, :test do
-  gem 'rspec-rails', '~> 2.0'
-  gem 'shoulda-matchers',   '~> 2.3.0'
-  gem 'factory_girl_rails', require: false
   gem 'capybara'
-  gem 'database_cleaner'
   gem 'coderay', '~> 1.0.9'
-  gem 'guard-rspec'
-  gem "jasmine-rails"
+  gem 'database_cleaner'
+  gem 'factory_girl_rails', require: false
   gem 'guard-jasmine'
+  gem 'guard-rspec'
   gem 'jasmine-jquery-rails'
+  gem 'jasmine-rails'
+  gem 'rspec-rails', '~> 2.0'
+  gem 'shoulda-matchers', '~> 2.3.0'
 end
