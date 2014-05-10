@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 gem 'rails', '4.1.0'
 
+gem 'activeadmin', github: 'gregbell/active_admin'
 gem 'coffee-rails'
 gem 'devise'
 gem 'jquery-rails'
@@ -14,6 +15,7 @@ group :development do
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'spring'
+  gem 'spring-commands-rspec', '~> 1.0.2'
   gem 'quiet_assets'
 end
 
