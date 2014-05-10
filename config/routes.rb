@@ -4,10 +4,10 @@ Portfolio::Application.routes.draw do
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes self
 
-  resources :screenshots
-  resources :projects_technologies
-  resources :technologies
-  resources :projects
+  namespace :api do
+    resources :technologies
+    resources :projects
+  end
 
   get 'about' => 'home#about', as: 'about'
   get 'details/:type/:id' => 'details#index', as: 'details'

@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 gem 'rails', '4.1.0'
 
 gem 'activeadmin', github: 'gregbell/active_admin'
+gem 'active_model_serializers'
 gem 'coffee-rails'
 gem 'devise'
 gem 'jquery-rails'
