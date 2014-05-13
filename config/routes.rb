@@ -6,7 +6,12 @@ Portfolio::Application.routes.draw do
 
   namespace :api do
     resources :technologies
-    resources :projects
+
+    resources :projects do
+      collection do
+        get :recent
+      end
+    end
   end
 
   get 'about' => 'home#about', as: 'about'
