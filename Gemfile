@@ -25,6 +25,7 @@ group :production do
 end
 
 group :development, :test do
+  gem 'capybara'
   gem 'database_cleaner'
   gem 'factory_girl_rails', require: false
   gem 'rspec-rails'
