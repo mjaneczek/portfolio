@@ -5,7 +5,8 @@ class PortfolioApp
 
   initializeApp: ->
     @app = angular.module 'portfolio', [
-      'ui.router'
+      'ui.router',
+      'rails'
     ]
 
   configureApp: ->

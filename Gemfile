@@ -4,6 +4,7 @@ gem 'rails', '4.1.0'
 gem 'activeadmin', github: 'gregbell/active_admin'
 gem 'active_model_serializers'
 gem 'angularjs-rails'
+gem 'angularjs-rails-resource', '~> 1.0.0'
 gem 'coffee-rails'
 gem 'devise'
 gem 'jquery-rails'
@@ -26,7 +27,6 @@ group :production do
 end
 
 group :development, :test do
-  gem 'capybara'
   gem 'database_cleaner'
   gem 'factory_girl_rails', require: false
   gem 'rspec-rails'

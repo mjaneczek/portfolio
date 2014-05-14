@@ -9,4 +9,5 @@ class @Routes
         templateUrl: "/templates/layouts/main"
       .state 'main.homepage',
         url: '/',
-        templateUrl: "/templates/homepage/index"
+        templateUrl: "/templates/homepage/index",
+        controller: 'HomepageCtrl'
