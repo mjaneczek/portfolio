@@ -47,6 +47,7 @@ GEM
       minitest (~> 5.1)
       thread_safe (~> 0.1)
       tzinfo (~> 1.1)
+    angularjs-rails (1.2.16)
     arbre (1.0.1)
       activesupport (>= 3.0.0)
     arel (5.0.1.20140414130214)
@@ -215,6 +216,7 @@ PLATFORMS
 DEPENDENCIES
   active_model_serializers
   activeadmin!
+  angularjs-rails
   better_errors
   binding_of_caller
   capybara

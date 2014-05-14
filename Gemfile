@@ -3,6 +3,7 @@ gem 'rails', '4.1.0'
 
 gem 'activeadmin', github: 'gregbell/active_admin'
 gem 'active_model_serializers'
+gem 'angularjs-rails'
 gem 'coffee-rails'
 gem 'devise'
 gem 'jquery-rails'

@@ -14,8 +14,6 @@ Portfolio::Application.routes.draw do
     end
   end
 
-  get 'about' => 'home#about', as: 'about'
-  get 'details/:type/:id' => 'details#index', as: 'details'
-
-  root 'home#index'
+  resources :templates, only: :show, constraints: { id: /.*/ }
+  root to: 'templates#show'
 end
