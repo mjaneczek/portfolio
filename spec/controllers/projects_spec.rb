@@ -15,9 +15,9 @@ describe Api::ProjectsController do
     expect(json_response.length).to eq 10
   end
 
-  it 'gets 5 last projects' do
+  it 'gets last 3 projects' do
     get :recent
-    expect(json_response.length).to eq 5
+    expect(json_response.length).to eq 3
   end
 
   it 'gets project details' do

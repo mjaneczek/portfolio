@@ -8,6 +8,6 @@ class Api::ProjectsController < Api::BaseController
   end
 
   def recent
-    render json: Project.last(5)
+    render json: Project.last(3)
   end
 end

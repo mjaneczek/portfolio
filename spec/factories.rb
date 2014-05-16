@@ -9,7 +9,6 @@ FactoryGirl.define do
 
   factory :technology do |f|
     f.name { |n| "Technology #{n}"}
-    f.css_class 'label-primary'
     f.description { |n| "Description #{n}" } 
     f.full_description { |n| "Full description #{n}" } 
   end

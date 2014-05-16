@@ -1,24 +1,20 @@
-footer
+footer ng-controller="FooterCtrl"
   .container
     .row
       .col-xs-7
-        h3.footer-title Subscribe
+        h3.footer-title Skontaktuj się!
         p
-          | Do you like this freebie? Want to get more stuff like this?
+          | Sugestie? Pytania? Propozycje współpracy?
           br
-            | Subscribe to designmodo news and updates to stay tuned on great designs.
-            br
-              | Go to:
-              a href="http://designmodo.com/flat-free" target="_blank"  designmodo.com/flat-free
+          | Po prostu napisz do mnie na email
+          a href="mailto:michal.janeczek@ymail.com"  michal.janeczek@ymail.com !
+          br
+        p.copyright
+          | Michał Janeczek © 2014
 
       .col-xs-5
         .footer-banner
           h3.footer-title Ostatnie projekty
           ul
-            li Tons of Basic and Custom UI Elements
-            li A Lot of Useful Samples
-            li More Vector Icons and Glyphs
-            li Pro Color Swatches
-            li Bootstrap Based HTML/CSS/JS Layout
-          | Go to:
-          a href="http://designmodo.com/flat" target="_blank"  designmodo.com/flat
+            li ng-repeat="project in recentProjects"
+              | {{project.name}}

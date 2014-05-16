@@ -4,8 +4,16 @@
 
 footer {
   margin-top: 50px;
+
+  .footer-banner {
+    min-height: 0px !important;
+  }
 }
 
 .technology p {
   height: 30px;
+}
+
+.copyright {
+  margin-top: 50px;
 }
