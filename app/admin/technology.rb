@@ -1,5 +1,5 @@
 ActiveAdmin.register Technology do
-  permit_params :name, :description, :full_description, project_ids: []
+  permit_params :name, :description, :full_description, :logo, :important, project_ids: []
 
   form do |f|
     f.inputs do
@@ -7,6 +7,8 @@ ActiveAdmin.register Technology do
       f.input :description
       f.input :full_description
       f.input :projects, as: :check_boxes
+      f.input :logo
+      f.input :important
     end
 
     f.actions
