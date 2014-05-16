@@ -1,4 +1,4 @@
-class HomepageCtrl extends BaseCtrl
+class AboutCtrl extends BaseCtrl
   @inject '$scope'
 
   initialize: ->

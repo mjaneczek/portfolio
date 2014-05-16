@@ -1,14 +1,14 @@
 nav.navbar.navbar-default role="navigation" ng-controller="NavbarCtrl"
   .container
     .navbar-header
-      a.navbar-brand href="#" {{ 'navbar.name' | translate }}
+      a.navbar-brand ui-sref="main.homepage" {{ 'navbar.name' | translate }}
       ul.nav.navbar-nav
         li
-          a href="#" {{ 'navbar.home' | translate }}
+          a ui-sref="main.homepage" {{ 'navbar.home' | translate }}
         li
-          a href="#" {{ 'navbar.projects_and_technologies' | translate }}
+          a ui-sref="main.projects" {{ 'navbar.projects_and_technologies' | translate }}
         li
-          a href="#" {{ 'navbar.about_me' | translate }}
+          a ui-sref="main.about" {{ 'navbar.about_me' | translate }}
 
     ul.nav.navbar-nav.navbar-right
       li.dropdown

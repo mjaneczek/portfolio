@@ -1,5 +1,33 @@
-h2
-  | Hello homepage!
+.jumbotron
+  h1 Witaj na stronie głównej!
+  p Ninejsza strona zawiera wykonane przeze mnie prace oraz poznane technologie.
+    Portfolio jest podzielona na 2 podstrony - jedną o projektach i drugą o komercyjnej karierze.
+  div
+    a.btn.btn-info.btn-lg ui-sref="main.projects" Dowiedź się więcej o projektach
+    a.btn.btn-success.btn-lg ui-sref="main.about" Dowiedź się więcej o karierze komercyjnej
 
-div ng-repeat="project in projects"
-  | {{project.name}}
+.row.demo-tiles
+  .col-xs-3
+    .tile
+      img.tile-image.big-illustration alt="Compas" src="images/icons/svg/compas.svg"
+        h3.tile-title Web Oriented
+        p 100% convertable to HTML/CSS layout.
+        a.btn.btn-primary.btn-large.btn-block href="http://designmodo.com/flat"  Get Pro
+  .col-xs-3
+    .tile
+      img.tile-image alt="Infinity-Loop" src="images/icons/svg/loop.svg"
+        h3.tile-title Easy to Customize
+        p Vector-based shapes and minimum of layer styles.
+        a.btn.btn-primary.btn-large.btn-block href="http://designmodo.com/flat"  Get Pro
+  .col-xs-3
+    .tile
+      img.tile-image alt="Pensils" src="images/icons/svg/pencils.svg"
+        h3.tile-title Color Swatches
+        p Easy to add or change elements.
+        a.btn.btn-primary.btn-large.btn-block href="http://designmodo.com/flat"  Get Pro
+  .col-xs-3
+    .tile.tile-hot
+      img.tile-image alt="Chat" src="images/icons/svg/chat.svg"
+        h3.tile-title Free for Share
+        p Your likes, shares and comments helps us.
+        a.btn.btn-primary.btn-large.btn-block href="http://designmodo.com/flat"  Get Pro

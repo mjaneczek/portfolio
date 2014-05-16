@@ -11,3 +11,11 @@ class @Routes
         url: '/',
         templateUrl: "/templates/homepage/index",
         controller: 'HomepageCtrl'
+      .state 'main.projects',
+        url: '/projects',
+        templateUrl: "/templates/projects/index",
+        controller: 'ProjectsCtrl'
+      .state 'main.about',
+        url: '/about',
+        templateUrl: "/templates/about/index",
+        controller: 'HomepageCtrl'
