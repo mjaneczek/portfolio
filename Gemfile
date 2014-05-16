@@ -17,7 +17,11 @@ gem 'railties', '~> 4.1.0'
 gem 'sass-rails'
 gem 'slim-rails'
 gem 'twitter-bootstrap-rails', git: 'git://github.com/seyhunak/twitter-bootstrap-rails.git', branch: 'bootstrap3'
-gem 'uglifier'
+
+group :assets do
+  gem 'therubyracer'
+  gem 'uglifier'
+end
 
 group :development do
   gem 'better_errors'

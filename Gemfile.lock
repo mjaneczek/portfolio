@@ -125,6 +125,7 @@ GEM
     kaminari (0.15.1)
       actionpack (>= 3.0.0)
       activesupport (>= 3.0.0)
+    libv8 (3.16.14.3)
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
@@ -176,6 +177,7 @@ GEM
       activesupport (>= 3.0)
       i18n
       polyamorous (~> 1.0.0)
+    ref (1.0.5)
     responders (1.0.0)
       railties (>= 3.2, < 5)
     rspec-core (2.14.8)
@@ -217,6 +219,9 @@ GEM
       activesupport (>= 3.0)
       sprockets (~> 2.8)
     temple (0.6.7)
+    therubyracer (0.12.1)
+      libv8 (~> 3.16.14.0)
+      ref
     thor (0.19.1)
     thread_safe (0.3.3)
     tilt (1.4.1)
@@ -260,5 +265,6 @@ DEPENDENCIES
   slim-rails
   spring
   spring-commands-rspec (~> 1.0.2)
+  therubyracer
   twitter-bootstrap-rails!
   uglifier
