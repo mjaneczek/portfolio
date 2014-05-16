@@ -225,6 +225,9 @@ GEM
       polyglot (>= 0.3.1)
     tzinfo (1.1.0)
       thread_safe (~> 0.1)
+    uglifier (2.5.0)
+      execjs (>= 0.3.0)
+      json (>= 1.8.0)
     warden (1.2.3)
       rack (>= 1.0)
 
@@ -258,3 +261,4 @@ DEPENDENCIES
   spring
   spring-commands-rspec (~> 1.0.2)
   twitter-bootstrap-rails!
+  uglifier
