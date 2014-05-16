@@ -8,12 +8,21 @@ footer {
   .footer-banner {
     min-height: 0px !important;
   }
+
+  .links{
+    margin-top: 15px;
+
+    a {
+      margin-right: 10px;
+    }
+  }
+
+  .copyright {
+    margin-top: 15px;
+  }
+
 }
 
 .technology p {
   height: 30px;
-}
-
-.copyright {
-  margin-top: 50px;
 }

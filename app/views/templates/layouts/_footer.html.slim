@@ -6,11 +6,19 @@ footer ng-controller="FooterCtrl"
         p
           | Sugestie? Pytania? Propozycje współpracy?
           br
-          | Po prostu napisz do mnie na email
-          a href="mailto:michal.janeczek@ymail.com"  michal.janeczek@ymail.com !
+          | Po prostu napisz do mnie na email:
+          a href="mailto:michal.janeczek@ymail.com"  michal.janeczek@ymail.com
           br
+        p.links
+          = image_tag 'skype.png'
+          a href="skype:michal-janeczek?add"  michal-janeczek
+          = image_tag 'github.png'
+          a href="https://github.com/mjaneczek"  mjaneczek
         p.copyright
           | Michał Janeczek © 2014
+          br
+          | Powered by
+          a href="http://designmodo.github.io/Flat-UI/"  Flat-UI
 
       .col-xs-5
         .footer-banner
