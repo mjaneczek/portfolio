@@ -6,15 +6,23 @@ class PortfolioApp
   initializeApp: ->
     @app = angular.module 'portfolio', [
       'ui.router',
-      'rails'
+      'rails',
+      'pascalprecht.translate'
     ]
 
   configureApp: ->
-    @app.config ($stateProvider, $urlRouterProvider) =>
+    @app.config ($stateProvider, $urlRouterProvider, $translateProvider) =>
       $urlRouterProvider.otherwise '/'
       @configureStates $stateProvider
+      @configureTranslations $translateProvider
 
   configureStates: (stateProvider) ->
     new Routes(stateProvider)
+
+  configureTranslations: (translationsProvider) ->
+    translationsProvider.useStaticFilesLoader
+      prefix: 'locales/', suffix: '.json'
+
+    translationsProvider.preferredLanguage 'en'
 
   new PortfolioApp()

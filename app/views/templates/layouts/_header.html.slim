@@ -1,9 +1,22 @@
-nav.navbar.navbar-default role="navigation"
+nav.navbar.navbar-default role="navigation" ng-controller="NavbarCtrl"
   .container
     .navbar-header
-      a.navbar-brand href="#" Michał Janeczek
+      a.navbar-brand href="#" {{ 'navbar.name' | translate }}
       ul.nav.navbar-nav
         li
-          a href="#"  Link
+          a href="#" {{ 'navbar.home' | translate }}
         li
-          a href="#"  Link
+          a href="#" {{ 'navbar.projects_and_technologies' | translate }}
+        li
+          a href="#" {{ 'navbar.about_me' | translate }}
+
+    ul.nav.navbar-nav.navbar-right
+      li.dropdown
+        a.dropdown-toggle data-toggle='dropdown' href="#"
+          | {{ currentLanguage()  | translate }}
+          b.caret
+        ul.dropdown-menu
+          li ng-click="changeLanguage('en')"
+            a href="#" {{ 'languages.en' | translate }}
+          li ng-click="changeLanguage('pl')"
+            a href="#" {{ 'languages.pl' | translate }}

@@ -1,0 +1,13 @@
+{
+    "navbar": {
+        "name": "Michał Janeczek",
+        "home": "Home",
+        "projects_and_technologies": "Projects and technologies",
+        "about_me": "About me"
+    },
+
+    "languages": {
+        "en": "English",
+        "pl": "Polish"
+    }
+}
