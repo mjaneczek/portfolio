@@ -1,5 +1,8 @@
+include ActionView::Helpers::AssetUrlHelper
+
 Paperclip::Attachment.default_options.merge!(
     storage: :dropbox,
+    default_url: '/example_logo.png',
     dropbox_credentials: {
         app_key: ENV['DROPBOX_API_KEY'],
         app_secret: ENV['DROPBOX_API_SECRET'],

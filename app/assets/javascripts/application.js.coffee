@@ -7,4 +7,7 @@
 #= require angularjs/rails/resource
 #= require angular-translate
 #= require angular-translation-static-file-loader/angular-translate-loader-static-files.js
+
+#= require app/app
+#= require app/controllers/base_ctrl
 #= require_tree

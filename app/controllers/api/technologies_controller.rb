@@ -6,4 +6,8 @@ class Api::TechnologiesController < Api::BaseController
   def show
     render json: Technology.find(params[:id]), serializer: TechnologyDetailsSerializer
   end
+
+  def important
+    render json: Technology.where(important: true)
+  end
 end

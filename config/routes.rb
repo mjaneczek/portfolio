@@ -5,7 +5,11 @@ Portfolio::Application.routes.draw do
   ActiveAdmin.routes self
 
   namespace :api do
-    resources :technologies
+    resources :technologies do
+      collection do
+        get :important
+      end
+    end
 
     resources :projects do
       collection do
