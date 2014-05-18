@@ -23,6 +23,6 @@ class PortfolioApp
     translationsProvider.useStaticFilesLoader
       prefix: 'locales/', suffix: '.json'
 
-    translationsProvider.preferredLanguage 'en'
+    translationsProvider.preferredLanguage 'pl'
 
   new PortfolioApp()

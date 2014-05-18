@@ -1,4 +1,4 @@
-h1
+h1.title
   | Kariera zawodowa
 
 div
@@ -16,7 +16,7 @@ ul.timeline
         h3 ng-hide='job.companyLogoUrl' {{job.name}}
         p
           small.text-muted
-            | from {{job.startDay}} to {{job.endDay || 'now'}}
+            | od {{job.startDay}} do {{job.endDay || 'dziś'}}
       .timeline-body
         h5
           | {{job.position}}
