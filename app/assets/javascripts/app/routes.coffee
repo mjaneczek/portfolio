@@ -15,6 +15,10 @@ class @Routes
         url: '/projects',
         templateUrl: "/templates/projects/index",
         controller: 'ProjectsCtrl'
+      .state 'main.project',
+        url: '/project/:id',
+        templateUrl: "/templates/projects/show",
+        controller: 'ProjectCtrl'
       .state 'main.about',
         url: '/about',
         templateUrl: "/templates/about/index",

@@ -7,7 +7,8 @@ class PortfolioApp
     @app = angular.module 'portfolio', [
       'ui.router',
       'rails',
-      'pascalprecht.translate'
+      'pascalprecht.translate',
+      'ngSanitize'
     ]
 
   configureApp: ->

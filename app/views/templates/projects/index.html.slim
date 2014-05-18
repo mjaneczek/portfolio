@@ -13,7 +13,7 @@ h1.title
               | {{technology.name}}
             | {{technology.description}}
   .col-xs-8
-    .pallete-item ng-repeat="project in projects"
+    .pallete-item ng-repeat="project in projects" ui-sref="main.project({id: project.id})"
       dl.palette.palette-turquoise
         dt
           | {{project.name}}
