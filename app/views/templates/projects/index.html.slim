@@ -1,5 +1,22 @@
 h2
   | Projects
 
-div ng-repeat="project in projects"
-  | {{project.name}}
+.row
+  .col-xs-4
+    .todo
+      .technologies-header
+        | Technologie
+      ul
+        li ng-repeat='technology in technologies'
+          .todo-content
+            h4.todo-name
+              | {{technology.name}}
+            | {{technology.description}}
+  .col-xs-8
+    .pallete-item ng-repeat="project in projects"
+      dl.palette.palette-turquoise
+        dt
+          | {{project.name}}
+      dl.palette.palette-green-sea
+        dt
+          span.label.label-success Default
