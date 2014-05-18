@@ -17,7 +17,11 @@ Portfolio::Application.routes.draw do
       end
     end
 
-    resources :jobs, only: :index
+    resources :jobs, only: :index do
+      collection do
+        get :summary
+      end
+    end
   end
 
   resources :templates, only: :show, constraints: { id: /.*/ }

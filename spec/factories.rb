@@ -18,5 +18,6 @@ FactoryGirl.define do
     f.end_day { Date.tomorrow }
     f.position { 'Programmer' }
     f.description { 'Some description' }
+    f.commercial true
   end
 end

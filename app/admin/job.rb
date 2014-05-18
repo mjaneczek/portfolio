@@ -1,5 +1,5 @@
 ActiveAdmin.register Job do
-  permit_params :name, :start_day, :end_day, :company_logo, :description, :position
+  permit_params :name, :start_day, :end_day, :company_logo, :description, :position, :commercial
 
   form do |f|
     f.inputs do
@@ -8,6 +8,7 @@ ActiveAdmin.register Job do
       f.input :end_day
       f.input :position
       f.input :description
+      f.input :commercial
       f.input :company_logo
     end
 
