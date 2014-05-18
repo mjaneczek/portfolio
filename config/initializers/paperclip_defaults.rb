@@ -1,14 +1,13 @@
 include ActionView::Helpers::AssetUrlHelper
 
 Paperclip::Attachment.default_options.merge!(
-    storage: :dropbox,
+    storage: :fog,
     default_url: '/example_logo.png',
-    dropbox_credentials: {
-        app_key: ENV['DROPBOX_API_KEY'],
-        app_secret: ENV['DROPBOX_API_SECRET'],
-        access_token: ENV['DROPBOX_ACCESS_TOKEN'],
-        access_token_secret: ENV['DROPBOX_ACCESS_TOKEN_SECRET'],
-        user_id: ENV['DROPBOX_USER_ID'],
-        access_type: 'app_folder'
-    }
+    fog_credentials: {
+        aws_access_key_id: ENV['S3_ACCESS_KEY'],
+        aws_secret_access_key: ENV['S3_SECRET_KEY'],
+        provider: 'AWS',
+        region: 'eu-west-1'
+    },
+    fog_directory: 'michaljaneczek'
 )
