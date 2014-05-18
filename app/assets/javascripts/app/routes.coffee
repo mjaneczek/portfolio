@@ -18,4 +18,4 @@ class @Routes
       .state 'main.about',
         url: '/about',
         templateUrl: "/templates/about/index",
-        controller: 'HomepageCtrl'
+        controller: 'AboutCtrl'

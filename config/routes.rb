@@ -16,6 +16,8 @@ Portfolio::Application.routes.draw do
         get :recent
       end
     end
+
+    resources :jobs, only: :index
   end
 
   resources :templates, only: :show, constraints: { id: /.*/ }

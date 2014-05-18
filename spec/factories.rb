@@ -13,10 +13,10 @@ FactoryGirl.define do
     f.full_description { |n| "Full description #{n}" } 
   end
 
-  factory :screenshot do |f|
-    f.image 'image.png'
-    f.description { |n| "Description #{n}" } 
-    
-    project
+  factory :job do |f|
+    f.start_day { Date.yesterday }
+    f.end_day { Date.tomorrow }
+    f.position { 'Programmer' }
+    f.description { 'Some description' }
   end
 end
