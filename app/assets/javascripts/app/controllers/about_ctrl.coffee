@@ -4,3 +4,6 @@ class AboutCtrl extends BaseCtrl
   initialize: ->
     @Job.get().then (jobs) =>
       @$scope.jobs = jobs
+
+    @Job.summary().then (summary) =>
+      @$scope.summary = summary

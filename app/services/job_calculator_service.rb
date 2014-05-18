@@ -1,6 +1,6 @@
 class JobCalculatorService
   def initialize
-    @oldest_job = Job.order(:start_day).last
+    @oldest_job = Job.order('start_day DESC').last
     @commercial_jobs = Job.where commercial: true
   end
 
@@ -18,7 +18,7 @@ class JobCalculatorService
 
   def sum_jobs_in_day(jobs)
     jobs.map do |job|
-      (job.end_day || Data.today) - job.start_day
+      (job.end_day || Date.today) - job.start_day
     end.inject(:+)
   end
 

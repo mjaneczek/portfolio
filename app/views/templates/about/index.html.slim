@@ -1,6 +1,11 @@
 h1
   | Kariera zawodowa
 
+div
+  | Programista od: {{summary.programmerFor.years}} lat, {{summary.programmerFor.months}} miesięcy, {{summary.programmerFor.days}} dni
+  br
+  | Komerycyjnie doświadczenie: {{summary.totalCommercialWork.years}} rok, {{summary.totalCommercialWork.months}} miesięcy, {{summary.totalCommercialWork.days}} dni
+
 ul.timeline
   li ng-repeat='job in jobs' ng-class="{'timeline-inverted': ($index % 2 == 1)}"
     .timeline-badge
