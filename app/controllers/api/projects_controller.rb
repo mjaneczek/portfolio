@@ -1,6 +1,8 @@
 class Api::ProjectsController < Api::BaseController
   def index
-    render json: Project.all
+    projects = Project.all.includes(:technologies)
+    projects = projects.where(technologies: { id: params[:technology_id] }) if params[:technology_id].present?
+    render json: projects
   end
 
   def show

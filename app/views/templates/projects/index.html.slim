@@ -7,16 +7,16 @@ h1.title
       .technologies-header
         | Technologie
       ul
-        li ng-repeat='technology in technologies'
+        li ng-repeat='technology in technologies' ui-sref="main.projects({technology: technology.id})"
           .todo-content
             h4.todo-name
               | {{technology.name}}
             | {{technology.description}}
   .col-xs-8
-    .pallete-item ng-repeat="project in projects" ui-sref="main.project({id: project.id})"
-      dl.palette.palette-turquoise
+    .pallete-item ng-repeat="project in projects | filter:technologyFilter()" ui-sref="main.project({id: project.id})"
+      dl.palette.palette-turquoise style="background-color: {{project.technologies[0].color}}"
         dt
           | {{project.name}}
-      dl.palette.palette-green-sea
-        dt
-          span.label.label-success Default
+      /dl.palette.palette-green-sea
+      /  dt
+      /    span.label.label-success Default

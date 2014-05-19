@@ -12,7 +12,7 @@ class @Routes
         templateUrl: "/templates/homepage/index",
         controller: 'HomepageCtrl'
       .state 'main.projects',
-        url: '/projects',
+        url: '/projects/:technology',
         templateUrl: "/templates/projects/index",
         controller: 'ProjectsCtrl'
       .state 'main.project',
