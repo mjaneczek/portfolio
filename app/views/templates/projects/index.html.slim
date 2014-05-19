@@ -7,7 +7,7 @@ h1.title
       .technologies-header
         | Technologie
       ul
-        li ng-repeat='technology in technologies' ui-sref="main.projects({technology: technology.id})"
+        li ng-class="{'todo-done':technology.id == currentTechnology}" ng-repeat='technology in technologies' ui-sref="main.projects({technology: technology.id})"
           .todo-content
             h4.todo-name
               | {{technology.name}}
@@ -17,6 +17,3 @@ h1.title
       dl.palette.palette-turquoise style="background-color: {{project.technologies[0].color}}"
         dt
           | {{project.name}}
-      /dl.palette.palette-green-sea
-      /  dt
-      /    span.label.label-success Default

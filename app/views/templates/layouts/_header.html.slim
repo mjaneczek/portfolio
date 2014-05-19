@@ -6,7 +6,7 @@ nav.navbar.navbar-default role="navigation" ng-controller="NavbarCtrl"
         li
           a ui-sref="main.homepage" {{ 'navbar.home' | translate }}
         li
-          a ui-sref="main.projects" {{ 'navbar.projects_and_technologies' | translate }}
+          a ui-sref="main.projects({technology: ''})" {{ 'navbar.projects_and_technologies' | translate }}
         li
           a ui-sref="main.about" {{ 'navbar.about_me' | translate }}
 

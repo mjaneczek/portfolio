@@ -25,4 +25,5 @@ footer ng-controller="FooterCtrl"
           h3.footer-title Ostatnie projekty
           ul
             li ng-repeat="project in recentProjects"
-              | {{project.name}}
+              a ui-sref='main.project({id: project.id})'
+                | {{project.name}}
