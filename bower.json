@@ -3,7 +3,6 @@
   "version": "0.0.0",
   "dependencies": {
     "angular-ui-router": "https://github.com/angular-ui/ui-router.git",
-    "flat-ui": "https://github.com/designmodo/Flat-UI.git",
     "angular-translation-static-file-loader": "https://github.com/angular-translate/bower-angular-translate-loader-static-files.git"
   }
 }
