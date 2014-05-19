@@ -16,7 +16,7 @@ nav.navbar.navbar-default role="navigation" ng-controller="NavbarCtrl"
           | {{ currentLanguage()  | translate }}
           b.caret
         ul.dropdown-menu
-          li ng-click="changeLanguage('en')"
-            a href="#" {{ 'languages.en' | translate }}
+          /li ng-click="changeLanguage('en')"
+          /  a href="#" {{ 'languages.en' | translate }}
           li ng-click="changeLanguage('pl')"
             a href="#" {{ 'languages.pl' | translate }}
