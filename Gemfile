@@ -19,11 +19,6 @@ gem 'sass-rails'
 gem 'slim-rails'
 gem 'twitter-bootstrap-rails', git: 'git://github.com/seyhunak/twitter-bootstrap-rails.git', branch: 'bootstrap3'
 
-group :assets do
-  gem 'therubyracer'
-  gem 'uglifier'
-end
-
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller'
@@ -34,6 +29,8 @@ end
 
 group :production do
   gem 'rails_12factor'
+  gem 'therubyracer'
+  gem 'uglifier'
 end
 
 group :development, :test do
